@@ -19,5 +19,11 @@ pipeline {
                 sh "mvn ${params.build}"
             }
         }
+        stage("Printing" ) {
+            agent {label "SHPZR-2"}
+            steps {
+                sh "echo hello shopizer"
+            }
+        }
     }
 }
